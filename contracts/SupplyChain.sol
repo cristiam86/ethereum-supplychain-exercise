@@ -110,6 +110,7 @@ contract SupplyChain {
 
   function buyItem(uint sku) public payable forSale(sku) paidEnough(items[sku].price) checkValue(sku){
     Item storage item = items[sku];
+    require(msg.sender != item.seller, 'Seller can not buy item');
     item.seller.transfer(item.price);
     item.buyer = msg.sender;
     item.state = State.Sold;

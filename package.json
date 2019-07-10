@@ -1,0 +1,19 @@
+{
+  "name": "supply_chain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "develop": "truffle develop",
+    "test": "truffle test",
+    "test:js": "truffle test ./test/supply_chain.test.js",
+    "test:sol": "truffle test ./test/TestSupplyChain.sol"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "truffle": "^5.0.0"
+  }
+}
